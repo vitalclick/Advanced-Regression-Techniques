@@ -1,0 +1,4 @@
+## Unzip a File
+from shutil import unpack_archive
+#unpack_archive('intercampusai2019.zip')
+unpack_archive('intercampusai2019.zip')
