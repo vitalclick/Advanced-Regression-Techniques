@@ -7,3 +7,8 @@ import numpy.random as nr
 
 # Importing the dataset
 dataset = pd.read_csv('BD.csv')
+
+dataset.head()
+
+
+dataset.drop(['1st', '2nd', '3rd' , '4th' , '5th' , '6th' , '7th' , 'Current Projection', 'Error in Projection', 'Error in Projection 4 Months Out'], axis=1, inplace=True)
