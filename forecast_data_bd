@@ -22,3 +22,6 @@ X[:, 1:3] = imputer.transform(X[:, 1:3])
 
 
 dataset.drop(dataset.index[204], inplace=True)
+
+X = dataset.iloc[:, :-1].values
+y = dataset.iloc[:, 20].values
