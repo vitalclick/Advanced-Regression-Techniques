@@ -12,3 +12,10 @@ dataset.head()
 
 
 dataset.drop(['Unnamed: 16', 'Unnamed: 17', 'Unnamed: 18' , 'Unnamed: 19'], axis=1, inplace=True)
+
+
+#Taking care of the missing data
+from sklearn.preprocessing import Imputer
+imputer = Imputer(missing_values = 'NaN', strategy = 'mean', axis = 0)
+imputer = imputer.fit(X[:, 1:3])
+X[:, 1:3] = imputer.transform(X[:, 1:3])
